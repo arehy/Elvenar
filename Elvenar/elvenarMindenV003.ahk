@@ -68,6 +68,7 @@ Loop {
         Szerszam2Y := 492
         Szerszam3X := 793
         Szerszam3Y := 466
+        MouseClick, left, 1120, 220, , 10 ;félre klikk
         Loop, 6 {
             ;Szerszam 1
             ;46, 24
@@ -76,29 +77,29 @@ Loop {
             Szerszam1X := Szerszam1X - 46
             Szerszam1Y := Szerszam1Y - 24
             Sleep, 1000
-            MouseClick, left, 1120, 220, , 5 ;félre klikk
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
             Sleep, 1000
         }
         Loop, 3 {
             ;Szerszam 2
-            ;80, 25
+            ;77, 42
             ;744, 492
             MouseClick, left, %Szerszam2X%, %Szerszam2Y%
-            Szerszam2X := Szerszam2X - 80
-            Szerszam2Y := Szerszam2Y - 25
+            Szerszam2X := Szerszam2X - 77
+            Szerszam2Y := Szerszam2Y - 42
             Sleep, 1000
-            MouseClick, left, 1120, 220, , 5 ;félre klikk
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
             Sleep, 1000
         }
         Loop, 3 {
             ;Szerszam 3
-            ;80, 25
+            ;77, 42
             ;793, 466
             MouseClick, left, %Szerszam3X%, %Szerszam3Y%
-            Szerszam3X := Szerszam3X - 80
-            Szerszam3Y := Szerszam3Y - 25
+            Szerszam3X := Szerszam3X - 77
+            Szerszam3Y := Szerszam3Y - 42
             Sleep, 1000
-            MouseClick, left, 1120, 220, , 5 ;félre klikk
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
             Sleep, 1000
         }
 
@@ -113,11 +114,11 @@ Loop {
         MouseClick, left, 689, 330, , 10
         Sleep, 1000
         MouseClick, left, 584, 386, , 10
-        ;Sleep, 1000
+        Sleep, 1000
         ;MouseClick, left, 837, 305, , 10
 
-
-        Sleep, 305000 ;5 perc
+        MouseClick, left, 87, 52, , 10
+        Sleep, 305000 ;5 perc + 5 mperc
     }
 }
 PgDn::
