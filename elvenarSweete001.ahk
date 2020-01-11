@@ -59,13 +59,14 @@ Loop {
     }
     
 
-    Loop, 3 {
+    Loop, 2 {
         MouseClick, left, 1200, 366, , 10 , D
         MouseClick, left, 1200, 246, , 10 , U
         Loop, 12 {
+            ;60 perc
             ;Szerszám beszedés
             Szerszam1X := 588
-            Szerszam1Y := 260
+            Szerszam1Y := 250
             MouseClick, left, 1120, 220, , 10 ;félre klikk
             Loop, 9 {
                 ;Szerszam 1
@@ -89,10 +90,71 @@ Loop {
             MouseClick, left, 584, 386, , 10
             Sleep, 305000 ;5 perc + 5 mperc
         }
-        
+        napfarmX := 761
+        napfarmY := 637
+        Loop, 3 {
+            ;Napfarm 
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
+            Sleep, 1000
+            MouseClick, left, %napfarmX%, %napfarmY%, , 10 ;beszed
+            Sleep, 1000
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
+            Sleep, 1000
+            MouseClick, left, %napfarmX%, %napfarmY%, , 10 ;zzzzzz
+            napfarmX := napfarmX - 75
+            napfarmY := napfarmY - 50
+            Sleep, 1000
+            MouseClick, left, 610, 390, , 10 ; 1 órás termelés indítás
+            Sleep, 1000
+        }
+        Loop, 6 {
+            ;30 perc
+            ;Szerszám beszedés
+            Szerszam1X := 588
+            Szerszam1Y := 250
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
+            Loop, 9 {
+                ;Szerszam 1
+                ;46, +24
+                MouseClick, left, %Szerszam1X%, %Szerszam1Y%
+                Szerszam1X := Szerszam1X - 46
+                Szerszam1Y := Szerszam1Y + 24
+                Sleep, 1000
+                MouseClick, left, 1120, 220, , 10 ;félre klikk
+                Sleep, 1000
+            }
 
+            ;Szerszám indítás
+            ;Műhely: 1141, 675
+            ;Mind kijelöl: 689, 330
+            ;Italok: 584, 386
+            MouseClick, left, 1141, 675, , 10
+            Sleep, 1000
+            MouseClick, left, 689, 330, , 10
+            Sleep, 1000
+            MouseClick, left, 584, 386, , 10
+            Sleep, 305000 ;5 perc + 5 mperc
+        }
 
-        MouseClick, left, 87, 52, , 10
+        ejfarmX := 879
+        ejfarmY := 558
+        Loop, 3 {
+            ;Éjfarm 
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
+            Sleep, 1000
+            MouseClick, left, %ejfarmX%, %ejfarmY%, , 10 ;beszed
+            Sleep, 1000
+            MouseClick, left, 1120, 220, , 10 ;félre klikk
+            Sleep, 1000
+            MouseClick, left, %ejfarmX%, %ejfarmY%, , 10 ;zzzzzz
+            ejfarmX := ejfarmX - 24
+            ejfarmY := ejfarmY - 24
+            Sleep, 1000
+            MouseClick, left, 610, 390, , 10 ; 1,5 órás termelés indítás
+            Sleep, 1000
+        }
+
+        MouseClick, left, 87, 52, , 10 ;frissítés
         Sleep, 60000
     }
 }
