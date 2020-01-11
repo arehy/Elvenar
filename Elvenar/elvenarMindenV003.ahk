@@ -21,8 +21,9 @@ Loop {
         KristalyX := KristalyX - 64
         KristalyY := KristalyY - 32
         Sleep, 1000
-        MouseClick, left, 610, 390, , 10
+        MouseClick, left, 610, 390, , 10 ;3 órás termelés indítás
         Sleep, 1000
+        
     } 
     
     
