@@ -2,7 +2,7 @@
 PgUp::
 CoordMode, Mouse, Screen
 Loop {
-    KristalyX := 868
+     KristalyX := 868
     KristalyY := 566
     MarvanyX := 561
     MarvanyY := 560
@@ -41,7 +41,6 @@ Loop {
         MouseClick, left, 610, 390, , 10
         Sleep, 1000
     }
-    
     Loop, 2 {
         ;Drágakő
         ;60, 32
@@ -56,7 +55,11 @@ Loop {
         Sleep, 1000
         MouseClick, left, 610, 390, , 10
         Sleep, 1000
-    }
+        MouseClick, left, 1120, 220, , 10 ;félre klikk
+        Sleep, 1000
+    } 
+    
+    
     
 
     Loop, 2 {
@@ -83,7 +86,7 @@ Loop {
             ;Műhely: 1141, 675
             ;Mind kijelöl: 689, 330
             ;Italok: 584, 386
-            MouseClick, left, 1141, 675, , 10
+            MouseClick, left, 588, 250, , 10
             Sleep, 1000
             MouseClick, left, 689, 330, , 10
             Sleep, 1000
@@ -128,7 +131,7 @@ Loop {
             ;Műhely: 1141, 675
             ;Mind kijelöl: 689, 330
             ;Italok: 584, 386
-            MouseClick, left, 1141, 675, , 10
+            MouseClick, left, 588, 250, , 10
             Sleep, 1000
             MouseClick, left, 689, 330, , 10
             Sleep, 1000
