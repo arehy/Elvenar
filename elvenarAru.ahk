@@ -9,5 +9,5 @@ Loop {
     Sleep, 3000
 }
 
-PgDn::
+PgDn::g
 Reload
