@@ -2,43 +2,9 @@
 PgUp::
 CoordMode, Mouse, Screen
 
-Loop, 19 {
-    MouseClick, left, 1200, 366, , 10 , D
-    MouseClick, left, 1200, 246, , 10 , U
-    ;30 perc
-    ;Szerszám beszedés
-    Szerszam1X := 588
-    Szerszam1Y := 250
-    MouseClick, left, 1120, 220, , 10 ;félre klikk
-    Loop, 9 {
-        ;Szerszam 1
-        ;46, +24
-        MouseClick, left, %Szerszam1X%, %Szerszam1Y%
-        Szerszam1X := Szerszam1X - 46
-        Szerszam1Y := Szerszam1Y + 24
-        Sleep, 1000
-        MouseClick, left, 1120, 220, , 10 ;félre klikk
-        Sleep, 1000
-    }
-
-    ;Szerszám indítás
-    ;Műhely: 1141, 675
-    ;Mind kijelöl: 689, 330
-    ;Italok: 584, 386
-    MouseClick, left, 588, 250, , 10
-    Sleep, 1000
-    MouseClick, left, 689, 330, , 10
-    Sleep, 1000
-    MouseClick, left, 584, 386, , 10
-    MouseClick, left, 87, 52, , 10 ;frissítés
-    Sleep, 305000 ;5 perc + 5 mperc
-}
-
-
-
 
 Loop {
-     KristalyX := 868
+    KristalyX := 868
     KristalyY := 566
     MarvanyX := 561
     MarvanyY := 560

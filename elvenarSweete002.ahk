@@ -115,7 +115,7 @@ Loop {
 
     ejfarmX := 879
     ejfarmY := 572
-    Loop, 3 { ;Éjfarm 
+    Loop, 2 { ;Éjfarm 
         
         MouseClick, left, 1120, 220, , 10 ;félre klikk
         Sleep, 1000
@@ -155,6 +155,7 @@ Loop {
         MouseClick, left, 689, 299, , 10
         Sleep, 1000
         MouseClick, left, 584, 347, , 10
+        Sleep, 1000
         Send, {F5} ;frissítés Chrome
         Sleep, 305000 ;5 perc + 5 mperc
     }
@@ -200,13 +201,14 @@ Loop {
         MouseClick, left, 689, 299, , 10
         Sleep, 1000
         MouseClick, left, 584, 347, , 10
+        Sleep, 1000
         Send, {F5} ;frissítés Chrome
         Sleep, 305000 ;5 perc + 5 mperc
     }
 
     ejfarmX := 879
     ejfarmY := 572
-    Loop, 3 { ;Éjfarm
+    Loop, 2 { ;Éjfarm
         MouseClick, left, 1120, 220, , 10 ;félre klikk
         Sleep, 1000
         MouseClick, left, %ejfarmX%, %ejfarmY%, , 10 ;beszed
@@ -245,6 +247,7 @@ Loop {
         MouseClick, left, 689, 299, , 10
         Sleep, 1000
         MouseClick, left, 584, 347, , 10
+        Sleep, 1000
         Send, {F5} ;frissítés Chrome
         Sleep, 305000 ;5 perc + 5 mperc
     }
@@ -290,6 +293,7 @@ Loop {
         MouseClick, left, 689, 299, , 10
         Sleep, 1000
         MouseClick, left, 584, 347, , 10
+        Sleep, 1000
         Send, {F5} ;frissítés Chrome
         Sleep, 305000 ;5 perc + 5 mperc
     }
