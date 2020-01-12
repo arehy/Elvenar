@@ -131,7 +131,7 @@ Loop {
         Sleep, 1000
     }
 
-    Loop, 12 { ;60 perc Szerszám
+    Loop, 11 { ;60 perc Szerszám
         ;Szerszám beszedés
         Szerszam1X := 588
         Szerszam1Y := 265
@@ -177,7 +177,7 @@ Loop {
         Sleep, 1000
     }
 
-    Loop, 6 { ;30 perc szerszám
+    Loop, 5 { ;30 perc szerszám
         ;Szerszám beszedés
         Szerszam1X := 588
         Szerszam1Y := 265
@@ -223,7 +223,7 @@ Loop {
         Sleep, 1000
     }
 
-    Loop, 6 { ;30 perc szerszám
+    Loop, 5 { ;30 perc szerszám
         ;Szerszám beszedés
         Szerszam1X := 588
         Szerszam1Y := 265
@@ -269,7 +269,7 @@ Loop {
         Sleep, 1000
     }
 
-    Loop, 12 { ;60 perc Szerszám
+    Loop, 11 { ;60 perc Szerszám
         ;Szerszám beszedés
         Szerszam1X := 588
         Szerszam1Y := 265
