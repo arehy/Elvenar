@@ -1,17 +1,11 @@
-#import pyautogui
-import time
+import pyautogui
+from time import sleep
+from random import randint
 
-""" def rSleep(min, max):
+def rSleep(min, max):
     r = randint(min, max)
-    time.sleep(r) """
+    r /= 1000
+    sleep(r)
 
-print('1')
-time.sleep(randint(2, 10))
-print('2')
-time.sleep(randint(2, 10))
-print('3')
-time.sleep(randint(2, 10))
-print('4')
-time.sleep(randint(2, 10))
-print('5')
-time.sleep(randint(2, 10))
+
+rSleep(800,4300)
