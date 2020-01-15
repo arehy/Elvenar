@@ -9,3 +9,5 @@ def rSleep(min, max):
 
 
 rSleep(800,4300)
+rSleep(800,4300)
+rSleep(800,4300)
