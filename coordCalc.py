@@ -15,7 +15,7 @@ ent.delete(0, END)
 
 coord1 = Label(window, text='ctrl+shift+1')
 coord1.pack()
-coord2 = Label(window, text='ctrl+shift+1')
+coord2 = Label(window, text='ctrl+shift+2')
 coord2.pack()
 coordKivonva = Label(window, text='ctrl+shift+n')
 coordKivonva.pack()
