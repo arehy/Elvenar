@@ -28,8 +28,6 @@ while True:
     text.insert(INSERT, mousepos)
     text.pack()
     sleep(0.0005)
-    x= int(posStrx)+15
-    y= int(posStry)+15
 
     if is_pressed('ctrl+shift+b'):
         break
