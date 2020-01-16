@@ -79,10 +79,10 @@ Loop {
     marvanyY := 448
     dragakoX := 667
     dragakoY := 502
-    napfarmX := 767
-    napfarmY := 650
-    ejfarmX := 879
-    ejfarmY := 572
+    napfarmX := 733
+    napfarmY := 675
+    ejfarmX := 883
+    ejfarmY := 584
     szerszamX := 588
     szerszamY := 265
     ;Kristaly
