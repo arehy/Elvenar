@@ -4,14 +4,16 @@ from time import sleep
 from keyboard import is_pressed
 
 window = Tk()
-window.geometry("130x170")
+window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
 
 ent = Entry(window)
 ent.pack()
-ent.delete(0, END)
+#ent.delete(0, END)
 
-
+fontFamily = "Helvetica"
+fontSize = 12
+fontColor = "red"
 
 coord1 = Label(window, text='ctrl+shift+1')
 coord1.pack()
@@ -43,7 +45,7 @@ while True:
     ins.pack()
     sleep(0.0005)
 
-    if is_pressed('ctrl+shift+n'):
+    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-'):
         try:
             epuletSzam = ent.get()
             epuletSzam = int(epuletSzam)-1
@@ -57,7 +59,8 @@ while True:
             xKivonvaOsztva = str(round((x1-x2)/epuletSzam))
             yKivonvaOsztva = str(round((y1-y2)/epuletSzam))
         coordKivonva.configure(text='ctrl+shift+n: '+xKivonva+', '+yKivonva)
-        coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva)
+        coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva, font=(fontFamily, fontSize), fg=fontColor)
+        coord1.configure(font=(fontFamily, fontSize), fg=fontColor)
         
     if is_pressed('ctrl+shift+b'):
         break
