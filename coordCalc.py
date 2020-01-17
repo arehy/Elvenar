@@ -8,6 +8,7 @@ window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
 
 ent = Entry(window)
+ent.focus()
 ent.pack()
 #ent.delete(0, END)
 
@@ -45,7 +46,7 @@ while True:
     ins.pack()
     sleep(0.0005)
 
-    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-'):
+    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-') or is_pressed('enter'):
         try:
             epuletSzam = ent.get()
             epuletSzam = int(epuletSzam)-1
@@ -66,7 +67,7 @@ while True:
         break
 
 
-
+    
     window.update()
     ins.delete(1.0,END)
     ins.pack()
