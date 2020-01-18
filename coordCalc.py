@@ -3,13 +3,10 @@ from pyautogui import position
 from time import sleep
 from keyboard import is_pressed
 
-def doSomething():
-    # check if saving
-    # if not:
-    window.destroy()
 
 
 window = Tk()
+window.iconbitmap('click.ico')
 window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
 
@@ -31,7 +28,6 @@ coordKivonva.pack()
 coordKivonvaOsztva = Label(window, text='ctrl+shift+n')
 coordKivonvaOsztva.pack()
 x1 = x2 = y1 = y2 = 0
-#window.protocol('WM_DELETE_WINDOW', doSomething)
 whileEx = True
 def whileExit():
     global whileEx
