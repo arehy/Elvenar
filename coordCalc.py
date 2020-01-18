@@ -14,6 +14,7 @@ window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
 
 ent = Entry(window)
+ent.focus()
 ent.pack()
 #ent.delete(0, END)
 
@@ -31,8 +32,15 @@ coordKivonvaOsztva = Label(window, text='ctrl+shift+n')
 coordKivonvaOsztva.pack()
 x1 = x2 = y1 = y2 = 0
 #window.protocol('WM_DELETE_WINDOW', doSomething)
+whileEx = True
+def whileExit():
+    global whileEx
+    whileEx = False
 
-while True:
+
+
+
+while whileEx == True:
     x, y = position()
     posStrx = str(x).rjust(4) #az rjust (rjust(4, '0')) a stringet átalakítja annyi karakteresre, ami a zárójelben az első szám, és azzal pótolja, ami a 2. érték
     posStry = str(y).rjust(4)
@@ -51,14 +59,14 @@ while True:
     ins.pack()
     sleep(0.0005)
 
-    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-'):
+    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-') or is_pressed('enter'):
         try:
             epuletSzam = ent.get()
             epuletSzam = int(epuletSzam)-1
         except ValueError:
             epuletSzam = 1
         if epuletSzam == 0:
-            xKivonva = yKivonva = xKivonvaOsztva = yKivonvaOsztva = '0'
+            xKivonvaOsztva = yKivonvaOsztva = '0'
         else:
             xKivonva = str(x1-x2)
             yKivonva = str(y1-y2)
@@ -71,6 +79,7 @@ while True:
     if is_pressed('ctrl+shift+b'):
         break
     
+    window.protocol('WM_DELETE_WINDOW', whileExit)
 
 
 
