@@ -1,0 +1,12 @@
+kristalyX := 1096
+kristalyY := 423
+marvanyX := 1026
+marvanyY := 708
+dragakoX := 876
+dragakoY := 642
+szerszam1X := 1141
+szerszam1Y := 675
+szerszam2X := 744
+szerszam2Y := 492
+szerszam3X := 793
+szerszam3Y := 466

@@ -1,0 +1,12 @@
+kristalyX := 868
+kristalyY := 463
+marvanyX := 561
+marvanyY := 448
+dragakoX := 667
+dragakoY := 502
+napfarmX := 733
+napfarmY := 675
+ejfarmX := 883
+ejfarmY := 584
+szerszamX := 588
+szerszamY := 265

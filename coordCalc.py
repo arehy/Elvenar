@@ -3,12 +3,17 @@ from pyautogui import position
 from time import sleep
 from keyboard import is_pressed
 
+def doSomething():
+    # check if saving
+    # if not:
+    window.destroy()
+
+
 window = Tk()
 window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
 
 ent = Entry(window)
-ent.focus()
 ent.pack()
 #ent.delete(0, END)
 
@@ -25,7 +30,7 @@ coordKivonva.pack()
 coordKivonvaOsztva = Label(window, text='ctrl+shift+n')
 coordKivonvaOsztva.pack()
 x1 = x2 = y1 = y2 = 0
-
+#window.protocol('WM_DELETE_WINDOW', doSomething)
 
 while True:
     x, y = position()
@@ -46,7 +51,7 @@ while True:
     ins.pack()
     sleep(0.0005)
 
-    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-') or is_pressed('enter'):
+    if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-'):
         try:
             epuletSzam = ent.get()
             epuletSzam = int(epuletSzam)-1
@@ -65,9 +70,10 @@ while True:
         
     if is_pressed('ctrl+shift+b'):
         break
-
-
     
+
+
+
     window.update()
     ins.delete(1.0,END)
     ins.pack()
