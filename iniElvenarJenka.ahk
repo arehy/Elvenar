@@ -1,11 +1,11 @@
 kristalyX := 1096
 kristalyY := 423
-marvanyX := 1026
-marvanyY := 708
-dragakoX := 876
-dragakoY := 642
-szerszam1X := 1141
-szerszam1Y := 675
+marvanyX := 1037
+marvanyY := 713
+dragakoX := 895
+dragakoY := 647
+szerszam1X := 1105
+szerszam1Y := 631
 szerszam2X := 744
 szerszam2Y := 492
 szerszam3X := 793
