@@ -18,6 +18,11 @@ Loop {
     ;Drágakő
     manufact(4, dragakoX, dragakoY, -60, -32, 3, 2)
 
+    ;torpVedobastya 407, 371
+    MouseClick, left, rNum(404, 410), rNum(368, 374), , rNum(7, 13) ;beszed
+    rSleep(800, 1200)
+    MouseClick, left, rNum(1038, 1266), rNum(158, 266), , rNum(7, 13) ;félre klikk
+    rSleep(800, 1200)
     
     ;Szerszám 3 óra (35) !!!!!!!!!!!!!!!!!!!
     Loop, 35 {
