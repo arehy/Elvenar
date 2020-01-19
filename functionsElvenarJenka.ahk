@@ -52,7 +52,7 @@ szerszamIndit(elsoSzerszCoordFixX, elsoSzerszCoordFixY, maxDifX, maxDifY) { ;max
     MouseClick, left, 689, 330, , rNum(7, 13) ;mind kijelöl
     rSleep(800, 1200)
     MouseClick, left, rNum(574, 594), rNum(376, 396), , rNum(7, 13) ;bal felső termelés indítás (5 perces)
-    rSleep(4000, 8000)
+    rSleep(3000, 4000)
     Send, {F5} ;frissítés Chrome
-    rSleep(300000, 308000)
+    rSleep(300000, 304000)
 }

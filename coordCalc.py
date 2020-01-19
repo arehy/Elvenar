@@ -40,7 +40,7 @@ def whileExit():
 
 while whileEx == True:
     x, y = position()
-    posStrx = str(x).rjust(4) #az rjust (rjust(4, '0')) a stringet átalakítja annyi karakteresre, ami a zárójelben az első szám, és azzal pótolja, ami a 2. érték
+    posStrx = str(x).rjust(4) #az rjust (rjust(4, '0')) a stringet átalakítja annyi karakteresre, ami a zárójelben az első szám, és olyan karrakterre pótolja, ami a 2. érték pl. (4, '0')
     posStry = str(y).rjust(4)
     mousepos = 'X: '+posStrx+' Y: '+posStry
     mouseposFix1 = 'ctrl+shift+1: '+posStrx+', '+posStry
