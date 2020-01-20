@@ -51,7 +51,7 @@ szerszamIndit(elsoSzerszCoordFixX, elsoSzerszCoordFixY, maxDifX, maxDifY) { ;max
     elsoSzerszCoordFixPluszDifY := elsoSzerszCoordFixY + rNum(-(maxDifY), maxDifY)
     MouseClick, left, %elsoSzerszCoordFixPluszDifX%, %elsoSzerszCoordFixPluszDifY%, , rNum(mouseSpeedMin, mouseSpeedMax) ;klikk az első műhelyre
     rSleep(sleepMin, sleepMax)
-    MouseClick, left, 689, 330, , rNum(mouseSpeedMin, mouseSpeedMax) ;mind kijelöl
+    MouseClick, left, %mindKijelolX%, %mindKijelolY%, , rNum(mouseSpeedMin, mouseSpeedMax) ;mind kijelöl
     rSleep(sleepMin, sleepMax)
     MouseClick, left, rNum(startSzerszXmin, startSzerszXmax), rNum(startSzerszYmin, startSzerszYmax), , rNum(mouseSpeedMin, mouseSpeedMax) ;bal felső termelés indítás (5 perces)
     rSleep(3000, 4000)

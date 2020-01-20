@@ -14,6 +14,9 @@ global felreXmin := 1038
 global felreXmax := 1266
 global felreYmin := 158
 global felreYmax := 266
+global mindKijelolX := 689
+global mindKijelolY := 330
+
 kristalyX := 1096
 kristalyY := 423
 marvanyX := 1037
