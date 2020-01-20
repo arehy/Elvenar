@@ -12,7 +12,7 @@ Loop {
     manufact(5, kristalyX, kristalyY, -48, 25, 3, 2)
 
     ;Márvány
-    manufact(4, marvanyX, marvanyY, -33, -16, 2, 1)
+    manufact(4, marvanyX, marvanyY, -30, -17, 2, 1)
 
     ;Drágakő
     manufact(2, dragakoX, dragakoY, -60, -30, 3, 2)
