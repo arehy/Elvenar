@@ -2,7 +2,7 @@ import pyautogui
 import time
 import iniElvenarPyJenka as ini
 import functionElvenarPyJenka as func
-time.sleep(3)
+
 
 for i in range(2):
     kristalyX = ini.kristalyX
@@ -12,7 +12,7 @@ for i in range(2):
     dragakoX = ini.dragakoX
     dragakoY = ini.dragakoY
 
-    func.manufact(4, kristalyX, kristalyY, -64, -32, 3, 2)
+    func.manufact(3, kristalyX, kristalyY, -64, -32, 3, 2)
 
 
     """ for i in range(2):

@@ -7,7 +7,7 @@ CoordMode, Mouse, Screen
 
 
 Loop {
-    #Include iniElvenarJenka.ahk
+    #Include, iniElvenarJenka.ahk
 
     ;Kristaly
     manufact(6, kristalyX, kristalyY, -64, -32, 3, 2)
