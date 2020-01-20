@@ -1,22 +1,21 @@
 import pyautogui
 import time
+import iniElvenarPyJenka as ini
+import functionElvenarPyJenka as func
+time.sleep(3)
 
-time.sleep(1)
+for i in range(2):
+    kristalyX = ini.kristalyX
+    kristalyY = ini.kristalyY
+    marvanyX = ini.marvanyX
+    marvanyY = ini.marvanyY
+    dragakoX = ini.dragakoX
+    dragakoY = ini.dragakoY
 
-pyautogui.moveTo(1803, 15, 0.2)
-pyautogui.click()
-time.sleep(1)
-
-for i in range(1):
-    kristalyX = 1096
-    kristalyY = 423
-    marvanyX = 1026
-    marvanyY = 708
-    dragakoX = 876
-    dragakoY = 642
+    func.manufact(4, kristalyX, kristalyY, -64, -32, 3, 2)
 
 
-    for i in range(6):
+    """ for i in range(2):
         pyautogui.moveTo(kristalyX, kristalyY, 0.2)
         pyautogui.click()
         time.sleep(1)
@@ -33,5 +32,5 @@ for i in range(1):
 
         pyautogui.moveTo(610, 390, 0.2) #3 órás termelés indítás
         pyautogui.click()
-        time.sleep(1)
+        time.sleep(1) """
 
