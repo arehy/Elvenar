@@ -34,8 +34,8 @@ Loop {
     ;Szerszám 3 óra (35) !!!!!!!!!!!!!!!!!!!
     Loop, 35 {
         szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY, 3, 2)
-        szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3)
-        szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 2)
+        szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3, 2)
+        szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 3, 2)
 
         szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
     }
