@@ -9,13 +9,16 @@ import pyperclip
 window = Tk()
 window.title('coordCalc')
 window.iconbitmap('click.ico')
-window.geometry("300x170")
-ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
+window.geometry("300x400")
+ins = Text(window, font=("Helvetica",12), relief="solid", height=1)
+ins2 = Text(window, font=("Helvetica",8), relief="solid")
+a = True
 
 ent = Entry(window)
 ent.focus()
 ent.pack()
 #ent.delete(0, END)
+
 
 fontFamily = "Helvetica"
 fontSize = 12
@@ -29,6 +32,26 @@ coordKivonva = Label(window, text='ctrl+shift+n')
 coordKivonva.pack()
 coordKivonvaOsztva = Label(window, text='ctrl+shift+n')
 coordKivonvaOsztva.pack()
+
+varName = Entry(window)
+varName.pack()
+
+#Radio gombok
+def set_text():
+    text = var.get()
+    varName.delete(0,END)
+    varName.insert(0,text)
+    return
+var = StringVar(window, '1')
+rbKristaly = Radiobutton(window, text="Kristály", variable=var, value='kristaly', command=set_text)
+rbKristaly.pack(anchor = W)
+rbMarvany = Radiobutton(window, text="Márvány", variable=var, value='marvany', command=set_text)
+rbMarvany.pack(anchor = W)
+rbDragako = Radiobutton(window, text="Drágakő", variable=var, value='dragako', command=set_text)
+rbDragako.pack(anchor = W)
+rbSzerszam = Radiobutton(window, text="Szerszám", variable=var, value='szerszam', command=set_text)
+rbSzerszam.pack(anchor = W)
+
 x1 = x2 = y1 = y2 = xKivonvaOsztva = yKivonvaOsztva = 0
 whileEx = True
 def whileExit():
@@ -54,10 +77,11 @@ while whileEx == True:
         y2 = y
         coord2.configure(text=mouseposFix2)
     ins.insert(INSERT, mousepos)
-    ins.pack()
     sleep(0.0005)
 
     if is_pressed('ctrl+shift+n') or is_pressed('ctrl+shift+-') or is_pressed('enter'):
+        xKivonva = str(x1-x2)
+        yKivonva = str(y1-y2)
         try:
             epuletSzam = ent.get()
             epuletSzam = int(epuletSzam)-1
@@ -66,31 +90,40 @@ while whileEx == True:
         if epuletSzam == 0:
             xKivonvaOsztva = yKivonvaOsztva = '0'
         else:
-            xKivonva = str(x1-x2)
-            yKivonva = str(y1-y2)
             xKivonvaOsztva = str(round((x1-x2)/(-epuletSzam))) #itt azért kell a minusz az epuletszam előtt, mert hogy jól adja ki az eredményt át kell fordítani
             yKivonvaOsztva = str(round((y1-y2)/(-epuletSzam)))
         coordKivonva.configure(text='ctrl+shift+n: '+xKivonva+', '+yKivonva)
         coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva, font=(fontFamily, fontSize), fg=fontColor)
         coord1.configure(font=(fontFamily, fontSize), fg=fontColor)
 
+    strXKivonvaOsztva = str(xKivonvaOsztva)
+    strYKivonvaOsztva = str(yKivonvaOsztva)
+    strX1 = str(x1)
+    strY1 = str(y1)
     if is_pressed('ctrl+shift+q'):
         pyperclip.copy(x1)
     if is_pressed('ctrl+shift+w'):
         pyperclip.copy(y1)
     if is_pressed('ctrl+shift+e'):
-        strX1 = str(x1)
-        strY1 = str(y1)
         pyperclip.copy(strX1+', '+strY1)
     if is_pressed('ctrl+shift+a'):
         pyperclip.copy(xKivonvaOsztva)
     if is_pressed('ctrl+shift+s'):
         pyperclip.copy(yKivonvaOsztva)
     if is_pressed('ctrl+shift+d'):
-        strXKivonvaOsztva = str(xKivonvaOsztva)
-        strYKivonvaOsztva = str(yKivonvaOsztva)
         pyperclip.copy(strXKivonvaOsztva+', '+strYKivonvaOsztva)
-        
+    if is_pressed('ctrl+shift+n') and a == True:
+        a = False
+        copyAll = varName.get()+'X := '+strX1+'\n'
+        copyAll += varName.get()+'Y := '+strY1+'\n'
+        copyAll += varName.get()+'DefX := '+strXKivonvaOsztva+'\n'
+        copyAll += varName.get()+'DefY := '+strYKivonvaOsztva+'\n'
+        #pyperclip.copy(copyAll)
+        #ins2.delete(1.0,END)
+        ins2.insert(INSERT, copyAll)
+        pyperclip.copy(ins2.get(1.0, END))
+    if is_pressed('ctrl+shift+m'):
+        a = True
     if is_pressed('ctrl+shift+b'):
         break
     
@@ -101,6 +134,7 @@ while whileEx == True:
     window.update()
     ins.delete(1.0,END)
     ins.pack()
+    ins2.pack()
 
         
         

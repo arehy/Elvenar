@@ -10,13 +10,13 @@ Loop {
     #Include, iniElvenarJenka.ahk
 
     ;Kristaly
-    manufact(6, kristalyX, kristalyY, -64, -32, 3, 2)
+    manufact(6, kristalyX, kristalyY, kristalyDefX, kristalyDefY, 3, 2)
 
     ;Márvány
-    manufact(4, marvanyX, marvanyY, -30, -16, 2, 1)
+    manufact(4, marvanyX, marvanyY, marvanyDefX, marvanyDefY, 2, 1)
 
     ;Drágakő
-    manufact(4, dragakoX, dragakoY, -60, -32, 3, 2)
+    manufact(4, dragakoX, dragakoY, dragakoDefX, dragakoDefY, 3, 2)
 
     ;torp vedobastya 407, 371
     MouseClick, left, rNum(404, 410), rNum(368, 374), , rNum(mouseSpeedMin, mouseSpeedMax) ;beszed
@@ -33,9 +33,9 @@ Loop {
 
     ;Szerszám 3 óra (35) !!!!!!!!!!!!!!!!!!!
     Loop, 35 {
-        szerszamBeszed(6, szerszam1X, szerszam1Y, -46, -24, 3, 2)
-        szerszamBeszed(3, szerszam2X, szerszam2Y, -77, -42, 4, 3)
-        szerszamBeszed(3, szerszam3X, szerszam3Y, -77, -42, 4, 2)
+        szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY, 3, 2)
+        szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3)
+        szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 2)
 
         szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
     }
