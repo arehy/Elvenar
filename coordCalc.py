@@ -7,10 +7,10 @@ import pyperclip
 
 
 window = Tk()
+window.title('coordCalc')
 window.iconbitmap('click.ico')
 window.geometry("300x170")
 ins = Text(window, font=("Helvetica",12), borderwidth=2, relief="solid")
-
 
 ent = Entry(window)
 ent.focus()
@@ -68,8 +68,8 @@ while whileEx == True:
         else:
             xKivonva = str(x1-x2)
             yKivonva = str(y1-y2)
-            xKivonvaOsztva = str(round((x1-x2)/epuletSzam))
-            yKivonvaOsztva = str(round((y1-y2)/epuletSzam))
+            xKivonvaOsztva = str(round((x1-x2)/(-epuletSzam))) #itt azért kell a minusz az epuletszam előtt, mert hogy jól adja ki az eredményt át kell fordítani
+            yKivonvaOsztva = str(round((y1-y2)/(-epuletSzam)))
         coordKivonva.configure(text='ctrl+shift+n: '+xKivonva+', '+yKivonva)
         coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva, font=(fontFamily, fontSize), fg=fontColor)
         coord1.configure(font=(fontFamily, fontSize), fg=fontColor)
