@@ -25,10 +25,10 @@ Loop {
 
     ;Szerszám 3 óra (35) !!!!!!!!!!!!!!!!!!!
     Loop, 35 {
-        szerszamBeszed(3, szerszam1X, szerszam1Y, -46, -24, 3, 2)
-        szerszamBeszed(2, szerszam2X, szerszam2Y, -47, 36, 3, 2)
+        szerszamBeszed(8, szerszam1X, szerszam1Y, -46, -24, 3, 2)
+        ;szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
+        szerszamIndit(833, 458, 3, 2) ; ideiglenes
 
-        szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
     }
 }
 
