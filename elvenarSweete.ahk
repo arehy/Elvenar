@@ -23,11 +23,11 @@ Loop {
     MouseClick, left, rNum(1038, 1266), rNum(158, 266), , rNum(mouseSpeedMin, mouseSpeedMax) ;félre klikk
     rSleep(800, 1200)
 
-    ;Szerszám 3 óra (35) !!!!!!!!!!!!!!!!!!!
-    Loop, 35 {
+    ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
+    Loop, 34 {
         szerszamBeszed(8, szerszam1X, szerszam1Y, -46, -24, 3, 2)
-        ;szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
-        szerszamIndit(833, 458, 3, 2) ; ideiglenes
+        szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
+        ;szerszamIndit(833, 458, 3, 2) ; ideiglenes
 
     }
 }
