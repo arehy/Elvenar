@@ -1,18 +1,23 @@
 from tkinter import*
+from tkinter.ttk import * 
 from pyautogui import position
 from time import sleep
 from keyboard import is_pressed
 import pyperclip
 
 
-
 window = Tk()
 window.title('coordCalc')
 window.iconbitmap('click.ico')
 window.geometry("300x400")
-ins = Text(window, font=("Helvetica",12), relief="solid", height=1)
-ins2 = Text(window, font=("Helvetica",8), relief="solid")
+window.wm_attributes('-topmost','true')
+ins = Text(window, font=("Helvetica",12), height=1)
+ins2 = Text(window, font=("Helvetica",8))
 a = True
+
+style = Style()
+style.configure('w.TLabel', font =('calibri', 12, 'bold'), foreground = 'red') 
+
 
 ent = Entry(window)
 ent.focus()
@@ -92,9 +97,10 @@ while whileEx == True:
         else:
             xKivonvaOsztva = str(round((x1-x2)/(-epuletSzam))) #itt azért kell a minusz az epuletszam előtt, mert hogy jól adja ki az eredményt át kell fordítani
             yKivonvaOsztva = str(round((y1-y2)/(-epuletSzam)))
+            
         coordKivonva.configure(text='ctrl+shift+n: '+xKivonva+', '+yKivonva)
-        coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva, font=(fontFamily, fontSize), fg=fontColor)
-        coord1.configure(font=(fontFamily, fontSize), fg=fontColor)
+        coordKivonvaOsztva.configure(text='ctrl+shift+n: '+xKivonvaOsztva+', '+yKivonvaOsztva, style='w.TLabel')
+        coord1.configure(style='w.TLabel')
 
     strXKivonvaOsztva = str(xKivonvaOsztva)
     strYKivonvaOsztva = str(yKivonvaOsztva)
@@ -124,6 +130,8 @@ while whileEx == True:
         pyperclip.copy(ins2.get(1.0, END))
     if is_pressed('ctrl+shift+m'):
         a = True
+    if is_pressed('ctrl+shift+l'):
+        ins2.delete(1.0,END)
     if is_pressed('ctrl+shift+b'):
         break
     
