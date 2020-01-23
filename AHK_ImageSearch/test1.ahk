@@ -1,5 +1,5 @@
 CoordMode Pixel  ; Interprets the coordinates below as relative to the screen rather than the active window.
-ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, jatekmenetLejart.PNG
+ImageSearch, FoundX, FoundY, 0, 0, A_ScreenWidth, A_ScreenHeight, loginAblak.PNG
 if (ErrorLevel = 2)
     MsgBox Could not conduct the search.
 else if (ErrorLevel = 1)
