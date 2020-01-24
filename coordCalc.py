@@ -7,6 +7,7 @@ import pyperclip
 
 
 window = Tk()
+window.attributes('-alpha', 0.5)
 window.title('coordCalc')
 window.iconbitmap('click.ico')
 window.geometry("300x400")

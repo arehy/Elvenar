@@ -1,5 +1,5 @@
 PgUp::
-CoordMode Pixel  ; Interprets the coordinates below as relative to the screen rather than the active window.
+CoordMode Pixel, Screen  ; Interprets the coordinates below as relative to the screen rather than the active window.
 
 Loop {
     loginAblak1hiba := True
@@ -50,8 +50,8 @@ Loop {
 
 
 
-    ;if (loginAblak1hiba = False and loginAblak2hiba = False and loginAblak3hiba = False)
-        ;MsgBox Elindul a lényeg
+    if (loginAblak1hiba = False and loginAblak2hiba = False and loginAblak3hiba = False)
+        MsgBox Elindul a lényeg
 
 }
 
