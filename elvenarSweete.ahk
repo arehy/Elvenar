@@ -2,11 +2,13 @@
 PgUp::
 CoordMode, Mouse, Screen
 
+#Include iniElvenarSweete.ahk
 #Include, functionsElvenarJenka.ahk
 
+kezdjunkSzerszammal := idobekero(5) ; az érték, hogy hány perces termelésről van szó
 
 Loop {
-    #Include iniElvenarSweete.ahk
+    
 
     ;Kristaly
     manufact(5, kristalyX, kristalyY, -48, 25, 3, 2)

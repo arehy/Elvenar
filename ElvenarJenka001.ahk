@@ -2,12 +2,20 @@
 PgUp::
 CoordMode, Mouse, Screen
 
-
+#Include, iniElvenarJenka.ahk
 #Include, functionsElvenarJenka.ahk
 
+kezdjunkSzerszammal := idobekero(5) ; az érték, hogy hány perces termelésről van szó
+
+Loop, %kezdjunkSzerszammal% {
+    szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY, 3, 2)
+    szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3, 2)
+    szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 3, 2)
+
+    szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
+}
 
 Loop {
-    #Include, iniElvenarJenka.ahk
 
     ;Kristaly
     manufact(6, kristalyX, kristalyY, kristalyDefX, kristalyDefY, 3, 2)

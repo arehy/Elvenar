@@ -1,4 +1,4 @@
-rSleep(min, max) {
+﻿rSleep(min, max) {
     Random, randsleep, min, max
     Sleep, %randsleep%
 }
@@ -57,4 +57,29 @@ szerszamIndit(elsoSzerszCoordFixX, elsoSzerszCoordFixY, maxDifX, maxDifY) { ;max
     rSleep(3000, 4000)
     Send, {F5} ;frissítés Chrome
     rSleep(300000, 304000)
+}
+
+;IDŐBEKÉRŐ
+;erre kell állítani a szövegszerkesztőt: UTF-8 with BOM
+idobekero(oszto){
+    InputBox, perc, Kiskacsauraloooom!, Percben add meg az időt mennyi van még a manufaktúra termelésből, , , , , , , , 0
+    if ErrorLevel
+        Exit App
+    n := 60
+    masodperc := perc * n
+
+    if (perc = 0){
+        return 0
+    }
+    else if (masodperc = ""){
+        MsgBox, Ez nem szám volt, próbáld újra
+        idobekero(oszto)
+    }
+    else {
+        result := perc / oszto
+        result := Ceil(result)
+        return result
+        ;Run Shutdown /S /T %masodperc%
+    }
+    return
 }
