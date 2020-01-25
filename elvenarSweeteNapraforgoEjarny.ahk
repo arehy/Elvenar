@@ -2,11 +2,10 @@
 PgUp::
 CoordMode, Mouse, Screen
 
-#Include, functionsElvenarSweete.ahk
-
+#Include, functionsElvenarJenka.ahk
+#Include iniElvenarSweete.ahk
 
 Loop {
-    #Include iniElvenarSweete.ahk
     
     ;Kristaly
     manufact(5, kristalyX, kristalyY, -64, -32, 3, 2)

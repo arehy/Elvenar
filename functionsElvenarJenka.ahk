@@ -65,13 +65,13 @@ idobekero(oszto){
     InputBox, perc, Kiskacsauraloooom!, Percben add meg az időt mennyi van még a manufaktúra termelésből, , , , , , , , 0
     if ErrorLevel
         Exit App
-    n := 60
-    masodperc := perc * n
+    n := 1
+    testperc := perc * n, ; azért szorozzuk be, mert így üres karaktert ad vissza, ha az input nem szam
 
     if (perc = 0){
         return 0
     }
-    else if (masodperc = ""){
+    else if (testperc = ""){
         MsgBox, Ez nem szám volt, próbáld újra
         idobekero(oszto)
     }
@@ -79,7 +79,21 @@ idobekero(oszto){
         result := perc / oszto
         result := Ceil(result)
         return result
-        ;Run Shutdown /S /T %masodperc%
     }
     return
+}
+
+percSzamolo(hour, min){
+    minResult := hour * 60
+    minResult := minResult + min
+    return minResult
+}
+
+kezdjunkSzerszammal(hour, min, oszto) {
+    minResult := hour * 60
+    minResult := minResult + min
+
+    result := minResult / oszto
+    result := Ceil(result)
+    return result
 }
