@@ -17,8 +17,8 @@ global felreYmax := 266
 global mindKijelolX := 689
 global mindKijelolY := 299
 
-kristalyX := 404
-kristalyY := 364
+kristalyX := 595
+kristalyY := 274
 marvanyX := 579
 marvanyY := 443
 dragakoX := 685
