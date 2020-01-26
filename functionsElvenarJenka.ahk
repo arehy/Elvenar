@@ -9,7 +9,19 @@ rNum(min, max){
 moveClickOutside(){ ;félre klikk
     MouseClick, left, rNum(felreXmin, felreXmax), rNum(felreYmin, felreYmax), , rnum(mouseSpeedMin, mouseSpeedMax)
 }
-manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY, maxDifX, maxDifY) { ;maxDifX: Maximum megengedett különbség az X koordinátán.
+
+maxDif(mozgasCoord) {
+    maxDif := mozgasCoord / 20 ;így az 5%-a
+    maxDif := Ceil(maxDif)
+    return maxDif
+}
+
+manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY) {
+
+    maxDifX := maxDif(mozgasCoordX)
+    maxDifY := maxDif(mozgasCoordY)
+    ;maxDifX: Maximum megengedett különbség az X koordinátán.
+
     Loop %n% {
         ClickX := elsoManuCoordX + rNum(-(maxDifX), maxDifX) ; - és +
         ClickY := elsoManuCoordY + rNum(-(maxDifY), maxDifY)
@@ -28,8 +40,11 @@ manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY, maxDifX,
     }
 }
 
-szerszamBeszed(n, elsoSzerszCoordX, elsoSzerszCoordY, mozgasCoordX, mozgasCoordY, maxDifX, maxDifY) { ;maxDifX: Maximum megengedett különbség az X koordinátán.
-    ;Szerszám beszedés
+szerszamBeszed(n, elsoSzerszCoordX, elsoSzerszCoordY, mozgasCoordX, mozgasCoordY) { 
+    maxDifX := maxDif(mozgasCoordX)
+    maxDifY := maxDif(mozgasCoordY)
+    ;maxDifX: Maximum megengedett különbség az X koordinátán.
+
     moveClickOutside() ;félre klikk
     rSleep(sleepMin, sleepMax)
     Loop, %n%  {
@@ -45,7 +60,11 @@ szerszamBeszed(n, elsoSzerszCoordX, elsoSzerszCoordY, mozgasCoordX, mozgasCoordY
 
 }
 
-szerszamIndit(elsoSzerszCoordFixX, elsoSzerszCoordFixY, maxDifX, maxDifY) { ;maxDifX: Maximum megengedett különbség az X koordinátán.
+szerszamIndit(elsoSzerszCoordFixX, elsoSzerszCoordFixY, mozgasCoordX, mozgasCoordY) {
+    maxDifX := maxDif(mozgasCoordX)
+    maxDifY := maxDif(mozgasCoordY)
+    ;maxDifX: Maximum megengedett különbség az X koordinátán.
+
     ;Szerszám indítás
     elsoSzerszCoordFixPluszDifX := elsoSzerszCoordFixX + rNum(-(maxDifX), maxDifX)
     elsoSzerszCoordFixPluszDifY := elsoSzerszCoordFixY + rNum(-(maxDifY), maxDifY)

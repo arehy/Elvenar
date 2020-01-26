@@ -34,11 +34,11 @@ if (csakManu = 0) {
     kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
     ;msgbox, %kezdjunkSzerszammal%
     Loop, %kezdjunkSzerszammal% {
-        szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY, 3, 2)
-        szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3, 2)
-        szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 3, 2)
+        szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+        szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
+        szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
 
-        szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
+        szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
     }
 }
 else {
@@ -51,13 +51,13 @@ else {
 Loop {
 
     ;Kristaly
-    manufact(6, kristalyX, kristalyY, kristalyDefX, kristalyDefY, 3, 2)
+    manufact(6, kristalyX, kristalyY, kristalyDefX, kristalyDefY)
 
     ;Márvány
-    manufact(4, marvanyX, marvanyY, marvanyDefX, marvanyDefY, 2, 1)
+    manufact(4, marvanyX, marvanyY, marvanyDefX, marvanyDefY)
 
     ;Drágakő
-    manufact(4, dragakoX, dragakoY, dragakoDefX, dragakoDefY, 3, 2)
+    manufact(4, dragakoX, dragakoY, dragakoDefX, dragakoDefY)
 
     ;torp vedobastya 407, 371
     MouseClick, left, rNum(404, 410), rNum(368, 374), , rNum(mouseSpeedMin, mouseSpeedMax) ;beszed
@@ -74,11 +74,11 @@ Loop {
     if (csakManu = 0) {
         ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
         Loop, 34 {
-            szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY, 3, 2)
-            szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY, 3, 2)
-            szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY, 3, 2)
+            szerszamBeszed(6, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+            szerszamBeszed(3, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
+            szerszamBeszed(3, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
 
-            szerszamIndit(szerszam1X, szerszam1Y, 3, 2)
+            szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
         }
     }
     else {
