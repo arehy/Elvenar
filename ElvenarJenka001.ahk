@@ -57,7 +57,7 @@ Loop {
     manufact(4, marvanyX, marvanyY, marvanyDefX, marvanyDefY)
 
     ;Drágakő
-    manufact(4, dragakoX, dragakoY, dragakoDefX, dragakoDefY)
+    manufact(2, dragakoX, dragakoY, dragakoDefX, dragakoDefY)
 
     ;torp vedobastya 407, 371
     MouseClick, left, rNum(404, 410), rNum(368, 374), , rNum(mouseSpeedMin, mouseSpeedMax) ;beszed

@@ -17,6 +17,32 @@ global felreYmax := 266
 global mindKijelolX := 689
 global mindKijelolY := 330
 
+;termelés indít:
+/* 
+
+global aruBeszed1X := 
+global aruBeszed1Y := 
+global aruBeszed2X := 
+global aruBeszed2Y := 
+global aruBeszed3X := 
+global aruBeszed3Y :=
+global aruBeszed4X := 
+global aruBeszed4Y :=  
+global szerszamBeszed1X :=
+global szerszamBeszed1Y :=
+global szerszamBeszed2X :=
+global szerszamBeszed2Y :=
+global szerszamBeszed3X :=
+global szerszamBeszed3Y :=
+global szerszamBeszed4X :=
+global szerszamBeszed4Y :=
+global szerszamBeszed5X :=
+global szerszamBeszed5Y :=
+global szerszamBeszed6X :=
+global szerszamBeszed6Y :=
+ */
+
+
 kristalyX := 1094
 kristalyY := 413
 kristalyDefX := -63
