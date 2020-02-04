@@ -42,7 +42,16 @@ global szerszamBeszed6X :=
 global szerszamBeszed6Y :=
  */
 
+;mennyi van belőle
+kristalyNum := 6
+marvanyNum := 4
+dragakoNum := 4
+szerszam1Num := 6
+szerszam2Num := 3
+szerszam3Num := 3
 
+
+;kkordináták és különbségek
 kristalyX := 1094
 kristalyY := 413
 kristalyDefX := -63
@@ -55,6 +64,14 @@ dragakoX := 895
 dragakoY := 647
 dragakoDefX := -60
 dragakoDefY := -32
+torpVedoBastyaX := 407
+torpVedoBastyaY := 371
+torpVedoBastyaDefX := 80 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
+torpVedoBastyaDefY := 60
+aranySzakadekX := 1350
+aranySzakadekY := 547
+aranySzakadekDefX := 60 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
+aranySzakadekDefY := 60
 szerszam1X := 1105
 szerszam1Y := 631
 szerszam1DefX := -46
