@@ -27,6 +27,7 @@ gui, submit
 ;msgbox, %hour%`n%min%`n%csakManu%
 
 CoordMode, Mouse, Screen
+#Include, globalVar.ahk
 #Include, iniElvenarJenka.ahk
 #Include, functionsElvenarJenka.ahk   
 

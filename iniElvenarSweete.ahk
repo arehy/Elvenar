@@ -1,23 +1,3 @@
-global mouseSpeedMin := 6
-global mouseSpeedMax := 9
-global sleepMin := 400
-global sleepMax := 600
-global startManuXmin := 600
-global startManuXmax := 620
-global startManuYmin := 338
-global startManuYmax := 358
-global startSzerszXmin := 574
-global startSzerszXmax := 594
-global startSzerszYmin := 337
-global startSzerszYmax := 357
-global felreXmin := 1038
-global felreXmax := 1266
-global felreYmin := 158
-global felreYmax := 266
-global mindKijelolX := 689
-global mindKijelolY := 299
-
-
 ;mennyi van belőle
 kristalyNum := 5
 marvanyNum := 4

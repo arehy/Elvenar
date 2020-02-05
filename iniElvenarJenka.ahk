@@ -1,21 +1,47 @@
-global mouseSpeedMin := 6
-global mouseSpeedMax := 9
-global sleepMin := 400
-global sleepMax := 600
-global startManuXmin := 600
-global startManuXmax := 620
-global startManuYmin := 380
-global startManuYmax := 400
-global startSzerszXmin := 574
-global startSzerszXmax := 594
-global startSzerszYmin := 376
-global startSzerszYmax := 396
-global felreXmin := 1038
-global felreXmax := 1266
-global felreYmin := 158
-global felreYmax := 266
-global mindKijelolX := 689
-global mindKijelolY := 330
+;mennyi van belőle
+kristalyNum := 6
+marvanyNum := 4
+dragakoNum := 4
+szerszam1Num := 6
+szerszam2Num := 3
+szerszam3Num := 3
+
+
+;kkordináták és különbségek
+kristalyX := 1091
+kristalyY := 312
+kristalyDefX := -62
+kristalyDefY := -30
+marvanyX := 1178
+marvanyY := 687
+marvanyDefX := -32
+marvanyDefY := -15
+dragakoX := 1032
+dragakoY := 616
+dragakoDefX := -61
+dragakoDefY := -31
+torpVedoBastyaX := 406
+torpVedoBastyaY := 266
+torpVedoBastyaDefX := 80 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
+torpVedoBastyaDefY := 60
+aranySzakadekX := 1351
+aranySzakadekY := 449
+aranySzakadekDefX := 60 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
+aranySzakadekDefY := 60
+szerszam1X := 1100
+szerszam1Y := 538
+szerszam1DefX := -48
+szerszam1DefY := -22
+szerszam2X := 748
+szerszam2Y := 389
+szerszam2DefX := -78
+szerszam2DefY := -42
+szerszam3X := 794
+szerszam3Y := 367
+szerszam3DefX := -78
+szerszam3DefY := -40
+
+
 
 ;termelés indít:
 /* 
@@ -41,46 +67,3 @@ global szerszamBeszed5Y :=
 global szerszamBeszed6X :=
 global szerszamBeszed6Y :=
  */
-
-;mennyi van belőle
-kristalyNum := 6
-marvanyNum := 4
-dragakoNum := 4
-szerszam1Num := 6
-szerszam2Num := 3
-szerszam3Num := 3
-
-
-;kkordináták és különbségek
-kristalyX := 1094
-kristalyY := 413
-kristalyDefX := -63
-kristalyDefY := -32
-marvanyX := 1037
-marvanyY := 713
-marvanyDefX := -30
-marvanyDefY := -16
-dragakoX := 895
-dragakoY := 647
-dragakoDefX := -60
-dragakoDefY := -32
-torpVedoBastyaX := 407
-torpVedoBastyaY := 371
-torpVedoBastyaDefX := 80 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
-torpVedoBastyaDefY := 60
-aranySzakadekX := 1350
-aranySzakadekY := 547
-aranySzakadekDefX := 60 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
-aranySzakadekDefY := 60
-szerszam1X := 1105
-szerszam1Y := 631
-szerszam1DefX := -46
-szerszam1DefY := -24
-szerszam2X := 744
-szerszam2Y := 492
-szerszam2DefX := -77
-szerszam2DefY := -42
-szerszam3X := 793
-szerszam3Y := 466
-szerszam3DefX := -77
-szerszam3DefY := -42

@@ -28,7 +28,8 @@ gui, submit
 
 CoordMode, Mouse, Screen
 
-#Include iniElvenarSweete.ahk
+#Include, globalVar.ahk
+#Include, iniElvenarSweete.ahk
 #Include, functionsElvenarJenka.ahk
 
 if (csakManu = 0) {
