@@ -104,7 +104,7 @@ idobekero(oszto){
 
 percSzamolo(hour, min){
     minResult := hour * 60
-    minResult := minResult + min
+    minResult += min
     return minResult
 }
 
