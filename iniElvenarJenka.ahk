@@ -1,5 +1,5 @@
-global mouseSpeedMin := 3
-global mouseSpeedMax := 6
+global mouseSpeedMin := 6
+global mouseSpeedMax := 9
 global sleepMin := 400
 global sleepMax := 600
 global startManuXmin := 600

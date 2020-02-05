@@ -31,20 +31,18 @@ CoordMode, Mouse, Screen
 #Include iniElvenarSweete.ahk
 #Include, functionsElvenarJenka.ahk
 
-if (csakManu = 0) {
-    kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
-    ;msgbox, %kezdjunkSzerszammal%
+kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
     Loop, %kezdjunkSzerszammal% {
-        szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
-        szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+        if (csakManu = 0) {
+            szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+            szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+        }
+        else {
+            rSleep(3000, 4000)
+            Send, {F5} ;frissítés Chrome
+            rSleep(300000, 304000)
+        }
     }
-}
-else {
-    min := percSzamolo(hour, min)
-    sec := min * 60
-    milisec := sec * 1000
-    Sleep, %milisec%
-}
 
 Loop {
     
@@ -61,20 +59,28 @@ Loop {
     ;arany szakadék 468, 451
     szerszamBeszed(1, aranySzakadekX, aranySzakadekY, aranySzakadekDefX, aranySzakadekDefY)
 
-    if (csakManu = 0) {
-    ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
-        Loop, 34 {
-            szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
-            szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
-            ;szerszamIndit(833, 458, 3, 2) ; ideiglenes
-
+    
+    ;Szerszám 3 óra  !!!!!!!!!!!!!!!!!!!
+        if (csakManu = 0) {
+            loopNum := 33
         }
-    }
-    else {
-        rSleep(10010000, 10020000)
-        Send, {F5} ;frissítés Chrome
-        rSleep(800000, 810000)
-    }
+        else {
+            loopNum := 35
+        }
+        Loop, %loopNum% {
+            if (csakManu = 0) {
+                szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+                szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+                ;szerszamIndit(833, 458, 3, 2) ; ideiglenes
+            }
+            else {
+                rSleep(3000, 4000)
+                Send, {F5} ;frissítés Chrome
+                rSleep(300000, 304000)
+            }
+        }
+    
+    
 }
 
 

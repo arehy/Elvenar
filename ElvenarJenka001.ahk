@@ -30,23 +30,23 @@ CoordMode, Mouse, Screen
 #Include, iniElvenarJenka.ahk
 #Include, functionsElvenarJenka.ahk   
 
-if (csakManu = 0) {
-    kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
-    ;msgbox, %kezdjunkSzerszammal%
-    Loop, %kezdjunkSzerszammal% {
-        szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
-        szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
-        szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
 
-        szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+    kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
+    Loop, %kezdjunkSzerszammal% {
+        if (csakManu = 0) {
+            szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+            szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
+            szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
+
+            szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+        }
+        else {
+            rSleep(3000, 4000)
+            Send, {F5} ;frissítés Chrome
+            rSleep(300000, 304000)
+        }
     }
-}
-else {
-    min := percSzamolo(hour, min)
-    sec := min * 60
-    milisec := sec * 1000
-    Sleep, %milisec%
-}
+
 
 Loop {
 
@@ -67,21 +67,28 @@ Loop {
 
 
     
-    if (csakManu = 0) {
-        ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
-        Loop, 34 {
-            szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
-            szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
-            szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
-
-            szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+        ;Szerszám 3 óra !!!!!!!!!!!!!!!!!!!
+        if (csakManu = 0) {
+            loopNum := 33
         }
-    }
-    else {
-        rSleep(10010000, 10020000)
-        Send, {F5} ;frissítés Chrome
-        rSleep(800000, 810000)
-    }
+        else {
+            loopNum := 35
+        }
+        Loop, %loopNum% {
+            if (csakManu = 0) {
+                szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
+                szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
+                szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
+
+                szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+            }
+            else {
+                rSleep(3000, 4000)
+                Send, {F5} ;frissítés Chrome
+                rSleep(300000, 304000)
+            }       
+        }
+    
 }
 
 
