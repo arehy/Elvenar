@@ -1,4 +1,4 @@
-;Böngésző méret: 50%
+﻿;Böngésző méret: 50%
 PgUp::
 
 Gui, Add, Edit, vhour x10 y10 w40 h20 Number

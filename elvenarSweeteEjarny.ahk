@@ -1,4 +1,4 @@
-;Böngésző méret: 50%
+﻿;Böngésző méret: 50%
 PgUp::
 CoordMode, Mouse, Screen
 
