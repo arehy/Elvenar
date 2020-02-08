@@ -32,14 +32,17 @@ CoordMode, Mouse, Screen
 #Include, functionsElvenarJenka.ahk   
 
 if (csakManu = 0) {
+    n := 1
     kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
     ;msgbox, %kezdjunkSzerszammal%
     Loop, %kezdjunkSzerszammal% {
+        MsgBox, , , %n% / %kezdjunkSzerszammal%, 1
         szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
         szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
         szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
 
         szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
+        n += 1
     }
 }
 else {
