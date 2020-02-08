@@ -71,10 +71,11 @@ Loop {
     if (csakManu = 0) {
     ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
         Loop, 33 {
+            MsgBox, , , %n%, 1
             szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             ;szerszamIndit(833, 458, 3, 2) ; ideiglenes
-
+            n += 1
         }
     }
     else {
