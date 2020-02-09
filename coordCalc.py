@@ -107,17 +107,17 @@ while whileEx == True:
     strYKivonvaOsztva = str(yKivonvaOsztva)
     strX1 = str(x1)
     strY1 = str(y1)
-    if is_pressed('ctrl+shift+q'):
+    if is_pressed('ctrl+shift+q'): #1. koordináta x másol a vágolapra
         pyperclip.copy(x1)
-    if is_pressed('ctrl+shift+w'):
-        pyperclip.copy(y1)
-    if is_pressed('ctrl+shift+e'):
+    if is_pressed('ctrl+shift+w'): #1. koordináta y másol a vágólapra
+        pyperclip.copy(y1) 
+    if is_pressed('ctrl+shift+e'): #1. koordináta x, y másol a vágólapra
         pyperclip.copy(strX1+', '+strY1)
-    if is_pressed('ctrl+shift+a'):
+    if is_pressed('ctrl+shift+a'): #2. koordináta x másol a vágólapra
         pyperclip.copy(xKivonvaOsztva)
-    if is_pressed('ctrl+shift+s'):
+    if is_pressed('ctrl+shift+s'): #2. koordináta y másol a vágólapra
         pyperclip.copy(yKivonvaOsztva)
-    if is_pressed('ctrl+shift+d'):
+    if is_pressed('ctrl+shift+d'): #2. koordináta x, y másol a vágólapra
         pyperclip.copy(strXKivonvaOsztva+', '+strYKivonvaOsztva)
     if is_pressed('ctrl+shift+n') and a == True:
         a = False
