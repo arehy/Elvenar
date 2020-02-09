@@ -4,14 +4,17 @@
 ;Random, SleepAmount, 96, 193
 ;Sleep, %SleepAmount%
 ;Send, s
-F12::
+
+
+/* F12::
 KeyDown := !KeyDown
 If KeyDown
 	SendInput {ALT down}
 Else
 	SendInput {ALT up}
 Return
-
+ */
+ 
 /* 
 !MButton::
 SendInput ^b 

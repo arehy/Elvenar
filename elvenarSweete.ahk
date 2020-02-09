@@ -32,12 +32,19 @@ CoordMode, Mouse, Screen
 #Include, iniElvenarSweete.ahk
 #Include, functionsElvenarJenka.ahk
 
+Gui, New 
+Gui, GuiName:New 
+Gui, +AlwaysOnTop
+Gui, Add, Text, vSzerszam x54 y12 w130 h20
+Gui, Show, x0 y200
+
 if (csakManu = 0) {
     n := 1
     kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
     ;msgbox, %kezdjunkSzerszammal%
     Loop, %kezdjunkSzerszammal% {
-        MsgBox, , , %n% / %kezdjunkSzerszammal%, 1
+        GuiControl, ,Szerszam ,%n% / %kezdjunkSzerszammal%
+        ;MsgBox, , , %n% / %kezdjunkSzerszammal%, 1
         szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
         szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
         n += 1
@@ -75,7 +82,8 @@ Loop {
         n := 1
         ;Szerszám 3 óra !!!!!!!!!!!!!!!!!!!
         Loop, 33 {
-            MsgBox, , , %n%, 1
+            GuiControl, ,Szerszam ,%n% / 33
+            ;MsgBox, , , %n%, 1
             szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             ;szerszamIndit(833, 458, 3, 2) ; ideiglenes

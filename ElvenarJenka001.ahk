@@ -23,20 +23,27 @@ GuiClose:
 ExitApp
 
 buttonok:
-gui, submit
+gui, submit ;ha nem akarjuk. hogy eltünjön az ablak az ok gomb lenyomása után, akkor ,NoHide -ot írjunk a submit után
 ;msgbox, %hour%`n%min%`n%csakManu%
+
+
 
 CoordMode, Mouse, Screen
 #Include, globalVar.ahk
 #Include, iniElvenarJenka.ahk
 #Include, functionsElvenarJenka.ahk   
-
+Gui, New 
+Gui, GuiName:New 
+Gui, +AlwaysOnTop
+Gui, Add, Text, vSzerszam x54 y12 w130 h20
+Gui, Show, x0 y200
 if (csakManu = 0) {
     n := 1
     kezdjunkSzerszammal := kezdjunkSzerszammal(hour, min, 5)
     ;msgbox, %kezdjunkSzerszammal%
     Loop, %kezdjunkSzerszammal% {
-        MsgBox, , , %n% / %kezdjunkSzerszammal%, 1
+        GuiControl, ,Szerszam ,%n% / %kezdjunkSzerszammal%
+        ;MsgBox, , , %n% / %kezdjunkSzerszammal%, 1
         szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
         szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
         szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
@@ -82,8 +89,8 @@ Loop {
         n := 1
         ;Szerszám 3 óra (34) !!!!!!!!!!!!!!!!!!!
         Loop, 33 {
-            
-            MsgBox, , , %n%, 1
+            GuiControl, ,Szerszam ,%n% / 33
+            ;MsgBox, , , %n%, 1
             szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
             szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
