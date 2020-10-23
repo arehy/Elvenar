@@ -11,8 +11,8 @@ marvany3Num := 0
 marvany4Num := 0
 dragakoNum := 4
 szerszam1Num := 4
-szerszam2Num := 8
-szerszam3Num := 0
+szerszam2Num := 5
+szerszam3Num := 3
 
 
 ;koordináták és különbségek
@@ -69,14 +69,14 @@ szerszam1X := 986
 szerszam1Y := 511
 szerszam1DefX := -47
 szerszam1DefY := -24
-szerszam2X := 649
-szerszam2Y := 571
-szerszam2DefX := -62
-szerszam2DefY := -32
-szerszam3X := 715
-szerszam3Y := 325
-szerszam3DefX := -78
-szerszam3DefY := -40
+szerszam2X := 634
+szerszam2Y := 595
+szerszam2DefX := -48
+szerszam2DefY := -27
+szerszam3X := 332
+szerszam3Y := 411
+szerszam3DefX := -61
+szerszam3DefY := -30
 
 
 
