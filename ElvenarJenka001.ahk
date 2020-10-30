@@ -116,7 +116,7 @@ Loop {
             ;MsgBox, , , %n%, 1
             szerszamBeszed(szerszam1Num, szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY)
             szerszamBeszed(szerszam2Num, szerszam2X, szerszam2Y, szerszam2DefX, szerszam2DefY)
-            ;szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
+            szerszamBeszed(szerszam3Num, szerszam3X, szerszam3Y, szerszam3DefX, szerszam3DefY)
 
             szerszamIndit(szerszam1X, szerszam1Y, szerszam1DefX, szerszam1DefY) ;itt azért kell a szerszam1DefX és Y mert ebből számolja ki hogy mennyi lehet a koordináta eltérés
             n += 1
