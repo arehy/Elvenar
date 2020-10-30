@@ -70,24 +70,17 @@ Loop {
 
     
     ;Kristaly
-    manufact(kristalyNum, kristalyX, kristalyY, kristalyDefX, kristalyDefY)
+    manufact(kristalyNum, kristalyX, kristalyY, kristalyDefX, kristalyDefY, "1")
 
     ;Márvány
-    manufact(marvanyNum, marvanyX, marvanyY, marvanyDefX, marvanyDefY)
-    manufact(marvany2Num, marvany2X, marvany2Y, marvanyDefX, marvanyDefY)
-    manufact(marvany3Num, marvany3X, marvany3Y, marvanyDefX, marvanyDefY)
-    manufact(marvany4Num, marvany4X, marvany4Y, marvanyDefX, marvanyDefY)
+    manufact(marvanyNum, marvanyX, marvanyY, marvanyDefX, marvanyDefY, "1")
+    manufact(marvany2Num, marvany2X, marvany2Y, marvanyDefX, marvanyDefY, "3")
+    manufact(marvany3Num, marvany3X, marvany3Y, marvanyDefX, marvanyDefY, "1")
+    manufact(marvany4Num, marvany4X, marvany4Y, marvanyDefX, marvanyDefY, "1")
 
     ;Drágakő
-    manufact(dragakoNum, dragakoX, dragakoY, dragakoDefX, dragakoDefY)
+    manufact(dragakoNum, dragakoX, dragakoY, dragakoDefX, dragakoDefY, "1")
 
-    ;Erdei kor
-    manufact(erdeiGyartoSorNum, erdeiGyartoSorX, erdeiGyartoSorY, erdeiGyartoSorDefX, erdeiGyartoSorDefY)
-    ;manufact(erdeiGyartoSor2Num, erdeiGyartoSor2X, erdeiGyartoSor2Y, erdeiGyartoSorDefX, erdeiGyartoSorDefY)
-
-    manufact(erdeiMarvanyNum, erdeiMarvanyX, erdeiMarvanyY, erdeiMarvanyDefX, erdeiMarvanyDefY)
-    manufact(erdeiAcelNum, erdeiAcelX, erdeiAcelY, erdeiAcelDefX, erdeiAcelDefY)
-    manufact(erdeiFaNum, erdeiFaX, erdeiFaY, erdeiFaDefX, erdeiFaDefY)
 
     ;torp vedobastya 407, 371
     szerszamBeszed(1, torpVedoBastyaX, torpVedoBastyaY, torpVedoBastyaDefX, torpVedoBastyaDefY)

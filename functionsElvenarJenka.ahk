@@ -16,7 +16,7 @@ maxDif(mozgasCoord) {
     return maxDif
 }
 
-manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY) {
+manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY, indit) {
 
     maxDifX := maxDif(mozgasCoordX)
     maxDifY := maxDif(mozgasCoordY)
@@ -35,7 +35,8 @@ manufact(n, elsoManuCoordX, elsoManuCoordY, mozgasCoordX, mozgasCoordY) {
         elsoManuCoordX := elsoManuCoordX + mozgasCoordX
         elsoManuCoordY := elsoManuCoordY + mozgasCoordY
         rSleep(sleepMin, sleepMax)
-        MouseClick, left, rNum(startManuXmin, startManuXmax), rNum(startManuYmin, startManuYmax), , rNum(mouseSpeedMin, mouseSpeedMax) ;bal felső termelés indítás (1, 1.5, 3 órás)
+        ;MouseClick, left, rNum(startManuXmin, startManuXmax), rNum(startManuYmin, startManuYmax), , rNum(mouseSpeedMin, mouseSpeedMax) ;bal felső termelés indítás (1, 1.5, 3 órás)
+        Send, %indit%
         rSleep(sleepMin, sleepMax)
     }
 }
