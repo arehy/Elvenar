@@ -10,9 +10,9 @@ marvany2Num := 2
 marvany3Num := 0
 marvany4Num := 0
 dragakoNum := 4
-szerszam1Num := 4
-szerszam2Num := 5
-szerszam3Num := 3
+szerszam1Num := 5
+szerszam2Num := 7
+szerszam3Num := 0
 
 
 ;koordináták és különbségek
@@ -65,8 +65,8 @@ aranySzakadekX := 1294
 aranySzakadekY := 419
 aranySzakadekDefX := 60 ;ez azért kell, mert ebből számolja ki a megengedett eltérést (ennek az 5%-a)
 aranySzakadekDefY := 60
-szerszam1X := 986
-szerszam1Y := 511
+szerszam1X := 1009
+szerszam1Y := 541
 szerszam1DefX := -47
 szerszam1DefY := -24
 szerszam2X := 634
