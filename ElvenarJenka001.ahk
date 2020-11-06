@@ -74,7 +74,7 @@ Loop {
 
     ;Márvány
     manufact(marvanyNum, marvanyX, marvanyY, marvanyDefX, marvanyDefY, "1")
-    manufact(marvany2Num, marvany2X, marvany2Y, marvanyDefX, marvanyDefY, "3")
+    manufact(marvany2Num, marvany2X, marvany2Y, marvanyDefX, marvanyDefY, "1")
     manufact(marvany3Num, marvany3X, marvany3Y, marvanyDefX, marvanyDefY, "1")
     manufact(marvany4Num, marvany4X, marvany4Y, marvanyDefX, marvanyDefY, "1")
 
